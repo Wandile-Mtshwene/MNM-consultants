@@ -1,0 +1,1896 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MNM Consultants — One Partner. Every Solution. Endless Growth.</title>
+    <meta name="description" content="MNM Consultants provides comprehensive Legal, Employment & Labour, Risk, Compliance and Financial consulting for South African SMEs. Your growth partner from registration to scale.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            --crimson:        #B8172A;
+            --crimson-dark:   #8B0000;
+            --crimson-light:  #D4243A;
+            --crimson-pale:   #F5EBEC;
+            --black:          #0D0D0D;
+            --dark:           #1A1A1A;
+            --gray-dark:      #333333;
+            --gray-mid:       #6B6B6B;
+            --gray-light:     #F5F5F5;
+            --gray-border:    #DDD6D6;
+            --white:          #FFFFFF;
+            --bg:             #F3EDEE;
+            --bg-alt:         #EAE2E3;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--dark);
+            background: var(--bg);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5 {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.15;
+            letter-spacing: -0.02em;
+        }
+
+        /* ─── NAVIGATION ─────────────────────────────── */
+        nav {
+            position: fixed;
+            inset: 0 0 auto 0;
+            z-index: 999;
+            height: 76px;
+            padding: 0 6%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: background 0.35s, box-shadow 0.35s;
+        }
+
+        nav.scrolled {
+            background: var(--bg);
+            box-shadow: 0 1px 0 var(--gray-border), 0 4px 24px rgba(0,0,0,0.06);
+        }
+
+        .nav-logo img { height: 44px; display: block; }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 0.78rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--dark);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover { color: var(--crimson); }
+
+        .nav-btn {
+            background: var(--crimson) !important;
+            color: var(--white) !important;
+            padding: 10px 22px;
+            border-radius: 2px;
+        }
+
+        .nav-btn:hover { background: var(--crimson-dark) !important; }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+        }
+
+        .hamburger span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: var(--dark);
+            transition: 0.3s;
+        }
+
+        /* ─── HERO ───────────────────────────────────── */
+        .hero {
+            min-height: 100vh;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            padding: 100px 6% 80px;
+            gap: 80px;
+            background: var(--bg);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-bg-mark {
+            position: absolute;
+            right: -4%;
+            top: 50%;
+            transform: translateY(-50%);
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+            font-size: clamp(160px, 22vw, 360px);
+            color: transparent;
+            -webkit-text-stroke: 1.5px rgba(184,23,42,0.055);
+            line-height: 1;
+            pointer-events: none;
+            user-select: none;
+            letter-spacing: -0.04em;
+        }
+
+        .hero-content { position: relative; z-index: 1; }
+
+        .hero-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(184,23,42,0.08);
+            border: 1px solid rgba(184,23,42,0.18);
+            border-radius: 100px;
+            padding: 6px 14px;
+            margin-bottom: 32px;
+        }
+
+        .hero-pill-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--crimson);
+            border-radius: 50%;
+        }
+
+        .hero-pill span {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 0.72rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--crimson);
+        }
+
+        .hero h1 {
+            font-size: clamp(2.6rem, 4.5vw, 4.4rem);
+            font-weight: 900;
+            color: var(--black);
+            margin-bottom: 24px;
+        }
+
+        .hero h1 em {
+            font-style: normal;
+            color: var(--crimson);
+        }
+
+        .hero > .hero-content > p {
+            font-size: 1.05rem;
+            color: var(--gray-mid);
+            max-width: 500px;
+            margin-bottom: 40px;
+            line-height: 1.8;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: var(--crimson);
+            color: var(--white);
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 0.82rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding: 15px 32px;
+            border-radius: 2px;
+            text-decoration: none;
+            display: inline-block;
+            transition: background 0.2s, transform 0.2s;
+        }
+
+        .btn-primary:hover {
+            background: var(--crimson-dark);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--dark);
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 0.82rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding: 14px 32px;
+            border-radius: 2px;
+            border: 2px solid var(--gray-border);
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.2s;
+        }
+
+        .btn-outline:hover {
+            border-color: var(--crimson);
+            color: var(--crimson);
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 40px;
+            margin-top: 52px;
+            padding-top: 40px;
+            border-top: 1px solid var(--gray-border);
+        }
+
+        .hero-stat strong {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+            font-size: 2.2rem;
+            color: var(--crimson);
+            display: block;
+            line-height: 1;
+            letter-spacing: -0.02em;
+        }
+
+        .hero-stat span {
+            font-size: 0.78rem;
+            color: var(--gray-mid);
+            font-weight: 500;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+        }
+
+        /* HERO VISUAL PANEL */
+        .hero-visual {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .hero-visual-card {
+            background: var(--bg-alt);
+            border: 1px solid var(--gray-border);
+            border-radius: 4px;
+            padding: 24px 28px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            transition: border-color 0.25s, background 0.25s;
+        }
+
+        .hero-visual-card:hover {
+            border-color: var(--crimson);
+            background: rgba(255,255,255,0.7);
+        }
+
+        .service-badge {
+            width: 44px;
+            height: 44px;
+            background: rgba(255,255,255,0.8);
+            border-radius: 2px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .service-badge svg {
+            width: 20px;
+            height: 20px;
+            color: var(--crimson);
+        }
+
+        .card-text strong {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            font-size: 0.95rem;
+            color: var(--black);
+            display: block;
+            margin-bottom: 3px;
+        }
+
+        .card-text span {
+            font-size: 0.8rem;
+            color: var(--gray-mid);
+        }
+
+        /* ─── TICKER BAR ─────────────────────────────── */
+        .ticker {
+            background: var(--black);
+            height: 48px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+        }
+
+        .ticker-inner {
+            display: flex;
+            gap: 0;
+            animation: ticker-scroll 30s linear infinite;
+            white-space: nowrap;
+        }
+
+        .ticker-item {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 0 32px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 0.7rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.35);
+            flex-shrink: 0;
+        }
+
+        .ticker-dot {
+            width: 4px;
+            height: 4px;
+            background: var(--crimson);
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        @keyframes ticker-scroll {
+            from { transform: translateX(0); }
+            to   { transform: translateX(-50%); }
+        }
+
+        /* ─── SHARED SECTION STYLES ───────────────────── */
+        .section { padding: 100px 6%; }
+
+        .label {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 0.72rem;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--crimson);
+            margin-bottom: 16px;
+        }
+
+        .section-title {
+            font-size: clamp(1.9rem, 3.2vw, 2.9rem);
+            font-weight: 900;
+            color: var(--black);
+            margin-bottom: 20px;
+        }
+
+        .section-sub {
+            font-size: 1rem;
+            color: var(--gray-mid);
+            max-width: 520px;
+            line-height: 1.8;
+        }
+
+        /* ─── ABOUT ──────────────────────────────────── */
+        .about {
+            background: var(--bg-alt);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+            padding: 100px 6%;
+        }
+
+        .about-left {
+            background: var(--crimson);
+            border-radius: 4px;
+            padding: 56px 48px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-left::before {
+            content: 'MNM';
+            position: absolute;
+            bottom: -30px;
+            right: -20px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+            font-size: 160px;
+            color: rgba(255,255,255,0.04);
+            line-height: 1;
+            pointer-events: none;
+        }
+
+        .about-logo-text {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+            font-size: 2.6rem;
+            color: var(--white);
+            line-height: 1.1;
+            letter-spacing: -0.03em;
+            margin-bottom: 36px;
+            opacity: 0.92;
+        }
+
+        .about-pillar {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 14px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .about-pillar:last-child { border-bottom: none; }
+
+        .about-pillar-num {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+            font-size: 0.7rem;
+            color: rgba(255,255,255,0.4);
+            width: 24px;
+            flex-shrink: 0;
+        }
+
+        .about-pillar span {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 0.9rem;
+            color: var(--white);
+            letter-spacing: 0.02em;
+        }
+
+        .about-right {}
+
+        .about-right p {
+            font-size: 1rem;
+            color: var(--gray-mid);
+            line-height: 1.85;
+            margin-bottom: 22px;
+        }
+
+        .about-right p:last-of-type { margin-bottom: 0; }
+
+        .mission-quote {
+            margin-top: 36px;
+            padding: 24px 28px;
+            background: rgba(255,255,255,0.7);
+            border-left: 4px solid var(--crimson);
+        }
+
+        .mission-quote p {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 1rem;
+            color: var(--dark);
+            font-style: italic;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        /* ─── FOUNDERS ──────────────────────────────── */
+        .founders { background: var(--bg); padding: 100px 6%; }
+
+        .founders-intro {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 60px;
+            gap: 40px;
+        }
+
+        .founders-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+        }
+
+        .founder-card {
+            background: rgba(255,255,255,0.72);
+            border: 1px solid var(--gray-border);
+            border-radius: 2px;
+            padding: 52px 36px 44px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            transition: border-color 0.3s, box-shadow 0.3s, background 0.3s;
+        }
+
+        .founder-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 3px;
+            background: var(--crimson);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s cubic-bezier(0.4,0,0.2,1);
+        }
+
+        .founder-card:hover {
+            border-color: rgba(184,23,42,0.25);
+            background: rgba(255,255,255,0.92);
+            box-shadow: 0 12px 40px rgba(184,23,42,0.09);
+        }
+
+        .founder-card:hover::before { transform: scaleX(1); }
+
+        .founder-avatar-wrap {
+            position: relative;
+            width: 110px;
+            height: 110px;
+            margin: 0 auto 30px;
+        }
+
+        .founder-avatar {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            object-fit: cover;
+            display: block;
+            position: relative;
+            z-index: 1;
+        }
+
+        .founder-avatar-ring {
+            position: absolute;
+            inset: -5px;
+            border-radius: 50%;
+            border: 1.5px solid rgba(184,23,42,0.22);
+        }
+
+        .founder-card h3 {
+            font-size: 1.15rem;
+            font-weight: 900;
+            color: var(--black);
+            margin-bottom: 6px;
+            letter-spacing: -0.01em;
+        }
+
+        .founder-role {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 0.7rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--crimson);
+            margin-bottom: 28px;
+        }
+
+        .founder-divider {
+            width: 36px;
+            height: 1px;
+            background: var(--gray-border);
+            margin: 0 auto 24px;
+        }
+
+        .founder-degree {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            font-size: 0.9rem;
+            color: var(--dark);
+            line-height: 1.45;
+            margin-bottom: 8px;
+        }
+
+        .founder-uni {
+            font-size: 0.82rem;
+            color: var(--gray-mid);
+            font-weight: 500;
+        }
+
+        /* ─── SERVICES ───────────────────────────────── */
+        .services { background: var(--bg); padding: 100px 6%; }
+
+        .services-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 56px;
+            gap: 40px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2px;
+            background: var(--gray-border);
+        }
+
+        .svc-card {
+            background: rgba(255,255,255,0.75);
+            padding: 44px 36px;
+            position: relative;
+            overflow: hidden;
+            transition: background 0.25s;
+        }
+
+        .svc-card::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: 3px;
+            background: var(--crimson);
+            transition: width 0.4s cubic-bezier(0.4,0,0.2,1);
+        }
+
+        .svc-card:hover { background: rgba(255,255,255,0.95); }
+        .svc-card:hover::after { width: 100%; }
+
+        .svc-num {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+            font-size: 5rem;
+            color: rgba(184,23,42,0.055);
+            line-height: 1;
+            margin-bottom: 8px;
+            letter-spacing: -0.04em;
+        }
+
+        .svc-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--crimson);
+            border-radius: 2px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 22px;
+        }
+
+        .svc-icon svg { width: 22px; height: 22px; color: var(--white); }
+
+        .svc-card h3 {
+            font-size: 1.2rem;
+            font-weight: 800;
+            color: var(--black);
+            margin-bottom: 14px;
+        }
+
+        .svc-card > p {
+            font-size: 0.875rem;
+            color: var(--gray-mid);
+            line-height: 1.75;
+            margin-bottom: 24px;
+        }
+
+        .svc-list { list-style: none; }
+
+        .svc-list li {
+            font-size: 0.82rem;
+            color: var(--gray-dark);
+            font-weight: 500;
+            padding: 7px 0;
+            border-bottom: 1px solid var(--gray-border);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .svc-list li:last-child { border-bottom: none; }
+
+        .svc-list li::before {
+            content: '';
+            width: 5px;
+            height: 5px;
+            background: var(--crimson);
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+
+        /* ─── WHY US ──────────────────────────────────── */
+        .why { background: #0D0D0D; padding: 100px 6%; }
+
+        .why .label    { color: var(--crimson-light); }
+        .why .section-title { color: var(--white); }
+        .why .section-sub   { color: rgba(255,255,255,0.45); }
+
+        .why-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: start;
+            margin-top: 64px;
+        }
+
+        .stats-block {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2px;
+            background: rgba(255,255,255,0.04);
+        }
+
+        .stat-cell {
+            background: var(--dark);
+            padding: 44px 32px;
+            text-align: center;
+        }
+
+        .stat-cell strong {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+            font-size: 3.2rem;
+            color: var(--crimson-light);
+            display: block;
+            line-height: 1;
+            margin-bottom: 10px;
+            letter-spacing: -0.03em;
+        }
+
+        .stat-cell span {
+            font-size: 0.78rem;
+            color: rgba(255,255,255,0.35);
+            font-weight: 500;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+        }
+
+        .why-pillars { display: flex; flex-direction: column; gap: 24px; }
+
+        .why-pillar {
+            padding: 28px 28px;
+            border: 1px solid rgba(255,255,255,0.07);
+            border-radius: 2px;
+            transition: border-color 0.25s;
+        }
+
+        .why-pillar:hover { border-color: rgba(184,23,42,0.4); }
+
+        .why-pillar h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            font-size: 0.95rem;
+            color: var(--white);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .pillar-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--crimson);
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .why-pillar p {
+            font-size: 0.875rem;
+            color: rgba(255,255,255,0.4);
+            line-height: 1.75;
+            padding-left: 20px;
+        }
+
+        /* ─── PROCESS ─────────────────────────────────── */
+        .process { background: var(--bg-alt); padding: 100px 6%; }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0;
+            margin-top: 64px;
+            position: relative;
+        }
+
+        .process-steps::before {
+            content: '';
+            position: absolute;
+            top: 27px;
+            left: 12.5%;
+            right: 12.5%;
+            height: 1px;
+            background: linear-gradient(to right, var(--crimson), rgba(184,23,42,0.2));
+        }
+
+        .process-step { padding: 0 28px; text-align: center; }
+
+        .step-circle {
+            width: 54px;
+            height: 54px;
+            border: 2px solid var(--crimson);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+            font-size: 1rem;
+            color: var(--crimson);
+            margin: 0 auto 28px;
+            background: var(--bg-alt);
+            position: relative;
+            z-index: 1;
+        }
+
+        .process-step h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            font-size: 0.95rem;
+            color: var(--black);
+            margin-bottom: 12px;
+        }
+
+        .process-step p {
+            font-size: 0.85rem;
+            color: var(--gray-mid);
+            line-height: 1.75;
+        }
+
+        /* ─── TESTIMONIALS ───────────────────────────── */
+        .testimonials { background: var(--bg); padding: 100px 6%; }
+
+        .t-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-top: 56px;
+        }
+
+        .t-card {
+            padding: 40px 36px;
+            background: rgba(255,255,255,0.65);
+            border: 1px solid var(--gray-border);
+            border-radius: 2px;
+            position: relative;
+            transition: border-color 0.25s, box-shadow 0.25s, background 0.25s;
+        }
+
+        .t-card:hover {
+            border-color: var(--crimson);
+            background: rgba(255,255,255,0.9);
+            box-shadow: 0 8px 32px rgba(184,23,42,0.08);
+        }
+
+        .t-quote {
+            font-size: 4rem;
+            color: var(--crimson);
+            opacity: 0.1;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+            line-height: 1;
+            position: absolute;
+            top: 20px;
+            right: 24px;
+        }
+
+        .t-card > p {
+            font-size: 0.9rem;
+            color: var(--gray-dark);
+            line-height: 1.85;
+            margin-bottom: 32px;
+            font-style: italic;
+        }
+
+        .t-author {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .t-avatar {
+            width: 42px;
+            height: 42px;
+            background: var(--crimson);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            font-size: 0.85rem;
+            color: var(--white);
+            flex-shrink: 0;
+        }
+
+        .t-author-info strong {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 0.875rem;
+            color: var(--black);
+            display: block;
+        }
+
+        .t-author-info span {
+            font-size: 0.78rem;
+            color: var(--gray-mid);
+        }
+
+        /* ─── CTA ────────────────────────────────────── */
+        .cta {
+            background: var(--crimson);
+            padding: 100px 6%;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta::before {
+            content: 'MNM';
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+            font-size: clamp(120px, 18vw, 280px);
+            color: rgba(255,255,255,0.04);
+            pointer-events: none;
+            white-space: nowrap;
+            letter-spacing: -0.04em;
+        }
+
+        .cta-inner { position: relative; z-index: 1; }
+
+        .cta h2 {
+            font-size: clamp(2rem, 4vw, 3.4rem);
+            font-weight: 900;
+            color: var(--white);
+            margin-bottom: 20px;
+        }
+
+        .cta > .cta-inner > p {
+            font-size: 1.05rem;
+            color: rgba(255,255,255,0.7);
+            max-width: 520px;
+            margin: 0 auto 44px;
+            line-height: 1.75;
+        }
+
+        .cta-btns {
+            display: flex;
+            gap: 14px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-white {
+            background: var(--white);
+            color: var(--crimson);
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            font-size: 0.82rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding: 15px 34px;
+            border-radius: 2px;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.2s;
+        }
+
+        .btn-white:hover {
+            background: var(--black);
+            color: var(--white);
+        }
+
+        .btn-ghost {
+            background: transparent;
+            color: var(--white);
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 0.82rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding: 14px 34px;
+            border-radius: 2px;
+            border: 2px solid rgba(255,255,255,0.35);
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.2s;
+        }
+
+        .btn-ghost:hover {
+            border-color: var(--white);
+            background: rgba(255,255,255,0.1);
+        }
+
+        /* ─── FOOTER ─────────────────────────────────── */
+        footer {
+            background: var(--black);
+            color: var(--white);
+            padding: 80px 6% 40px;
+        }
+
+        .footer-top {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1.2fr;
+            gap: 60px;
+            padding-bottom: 60px;
+            border-bottom: 1px solid rgba(255,255,255,0.07);
+            margin-bottom: 36px;
+        }
+
+        .footer-brand img {
+            height: 40px;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .footer-brand-name {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+            font-size: 1rem;
+            color: var(--white);
+            letter-spacing: 0.02em;
+            margin-bottom: 16px;
+        }
+
+        .footer-brand p {
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.35);
+            line-height: 1.8;
+            max-width: 280px;
+            margin-bottom: 20px;
+        }
+
+        .footer-tagline {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 0.7rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--crimson-light);
+        }
+
+        .footer-col h5 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            font-size: 0.72rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--white);
+            margin-bottom: 24px;
+        }
+
+        .footer-col ul { list-style: none; }
+
+        .footer-col ul li { margin-bottom: 12px; }
+
+        .footer-col ul li a {
+            text-decoration: none;
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.35);
+            transition: color 0.2s;
+        }
+
+        .footer-col ul li a:hover { color: var(--white); }
+
+        .footer-contact-row {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-bottom: 14px;
+        }
+
+        .footer-contact-row svg {
+            width: 15px;
+            height: 15px;
+            color: var(--crimson-light);
+            flex-shrink: 0;
+            margin-top: 1px;
+        }
+
+        .footer-contact-row span {
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.35);
+            line-height: 1.5;
+        }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .footer-bottom p {
+            font-size: 0.78rem;
+            color: rgba(255,255,255,0.2);
+        }
+
+        .footer-bottom span { color: var(--crimson-light); }
+
+        /* ─── WHATSAPP BUTTON ───────────────────────── */
+        .wa-btn {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            z-index: 998;
+            width: 56px;
+            height: 56px;
+            background: var(--crimson);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 20px rgba(184,23,42,0.35);
+            text-decoration: none;
+            transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+        }
+
+        .wa-btn:hover {
+            background: var(--crimson-dark);
+            transform: translateY(-3px) scale(1.06);
+            box-shadow: 0 8px 28px rgba(184,23,42,0.45);
+        }
+
+        .wa-btn svg {
+            width: 28px;
+            height: 28px;
+            fill: var(--white);
+        }
+
+        .wa-btn::before {
+            content: 'Chat with us';
+            position: absolute;
+            right: 64px;
+            background: var(--dark);
+            color: var(--white);
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 0.72rem;
+            letter-spacing: 0.05em;
+            white-space: nowrap;
+            padding: 7px 12px;
+            border-radius: 2px;
+            opacity: 0;
+            pointer-events: none;
+            transform: translateX(6px);
+            transition: opacity 0.2s, transform 0.2s;
+        }
+
+        .wa-btn:hover::before {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        @keyframes wa-pulse {
+            0%   { box-shadow: 0 0 0 0 rgba(184,23,42,0.45); }
+            70%  { box-shadow: 0 0 0 12px rgba(184,23,42,0); }
+            100% { box-shadow: 0 0 0 0 rgba(184,23,42,0); }
+        }
+
+        .wa-btn { animation: wa-pulse 2.5s ease-out infinite; }
+        .wa-btn:hover { animation: none; }
+
+        /* ─── ANIMATIONS ─────────────────────────────── */
+        .reveal {
+            opacity: 0;
+            transform: translateY(28px);
+            transition: opacity 0.65s ease, transform 0.65s ease;
+        }
+
+        .reveal.in-view {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .reveal:nth-child(2) { transition-delay: 0.08s; }
+        .reveal:nth-child(3) { transition-delay: 0.16s; }
+        .reveal:nth-child(4) { transition-delay: 0.24s; }
+        .reveal:nth-child(5) { transition-delay: 0.32s; }
+        .reveal:nth-child(6) { transition-delay: 0.40s; }
+
+        /* ─── RESPONSIVE ─────────────────────────────── */
+
+        /* Tablet */
+        @media (max-width: 1100px) {
+            .hero {
+                grid-template-columns: 1fr;
+                gap: 48px;
+                min-height: auto;
+                padding-top: 130px;
+                text-align: center;
+            }
+            .hero-bg-mark { display: none; }
+            .hero-content {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .hero > .hero-content > p { margin-left: auto; margin-right: auto; }
+            .hero-actions { justify-content: center; }
+            .hero-stats { justify-content: center; }
+            .hero-stat { text-align: center; }
+            .hero-visual { max-width: 540px; margin: 0 auto; width: 100%; }
+
+            .about { grid-template-columns: 1fr; gap: 0; }
+            .about-left {
+                border-radius: 4px 4px 0 0;
+                text-align: center;
+                padding: 48px 36px;
+            }
+            .about-logo-text { text-align: center; }
+            .about-pillar { justify-content: center; }
+            .about-right { padding: 48px 36px; background: var(--bg-alt); border-radius: 0 0 4px 4px; }
+            .mission-quote { text-align: left; }
+
+            .founders-grid { grid-template-columns: 1fr; max-width: 440px; margin: 0 auto; }
+            .founders-intro { flex-direction: column; align-items: center; text-align: center; }
+            .founders-intro .section-sub { margin: 0 auto; }
+
+            .services-grid { grid-template-columns: repeat(2, 1fr); }
+            .services-header { flex-direction: column; align-items: center; text-align: center; }
+            .services-header .section-sub { margin: 0 auto; }
+
+            .why-layout { grid-template-columns: 1fr; gap: 48px; }
+            .why { text-align: center; }
+            .why .section-sub { margin: 0 auto; }
+            .why-pillars { max-width: 640px; margin: 0 auto; }
+            .why-pillar p { padding-left: 0; text-align: left; }
+
+            .footer-top { grid-template-columns: 1fr 1fr; gap: 40px; }
+        }
+
+        /* Mobile */
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .nav-links.open {
+                display: flex;
+                flex-direction: column;
+                position: fixed;
+                top: 76px; left: 0; right: 0;
+                background: var(--bg);
+                padding: 28px 6%;
+                box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+                gap: 24px;
+                align-items: flex-start;
+            }
+            .hamburger { display: flex; }
+
+            .label { text-align: center; }
+            .section-title { text-align: center; }
+            .section-sub { text-align: center; margin-left: auto; margin-right: auto; }
+
+            .services-grid { grid-template-columns: 1fr; }
+
+            .process { text-align: center; }
+            .process .section-sub { margin: 0 auto; }
+            .process-steps { grid-template-columns: 1fr 1fr; gap: 44px; }
+            .process-steps::before { display: none; }
+            .process-step { text-align: center; }
+
+            .t-grid { grid-template-columns: 1fr; }
+
+            .footer-top { grid-template-columns: 1fr; gap: 36px; text-align: center; }
+            .footer-brand p { max-width: 100%; }
+            .footer-contact-row { justify-content: center; }
+            .footer-bottom { flex-direction: column; text-align: center; }
+
+            .stats-block { grid-template-columns: 1fr 1fr; }
+            .hero-stats { gap: 20px; justify-content: center; }
+
+            .cta { text-align: center; }
+            .cta h2 { text-align: center; }
+        }
+
+        /* Small mobile */
+        @media (max-width: 500px) {
+            .process-steps { grid-template-columns: 1fr; }
+            .hero-actions { flex-direction: column; align-items: center; }
+            .hero-actions a { width: 100%; text-align: center; }
+            .cta-btns { flex-direction: column; align-items: center; }
+            .cta-btns a { width: 100%; text-align: center; }
+            .stats-block { grid-template-columns: 1fr 1fr; }
+            .hero-stats { flex-wrap: wrap; justify-content: center; gap: 16px 32px; }
+            .about-right { padding: 40px 24px; }
+            .about-left { padding: 40px 24px; }
+            section { padding: 72px 5%; }
+            .founders { padding: 72px 5%; }
+            .founders-grid { max-width: 100%; }
+        }
+
+    </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════ NAVIGATION -->
+<nav id="nav">
+    <a href="#" class="nav-logo">
+        <img src="assets/logo-icon.png" alt="MNM Consultants">
+    </a>
+    <ul class="nav-links" id="navLinks">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#team">Our Team</a></li>
+        <li><a href="#process">How It Works</a></li>
+        <li><a href="#cta" class="nav-btn">Book Consultation</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+    </div>
+</nav>
+
+<!-- ═══════════════════════════════════════════════════ HERO -->
+<section class="hero" id="home">
+    <div class="hero-content">
+        <div class="hero-pill">
+            <div class="hero-pill-dot"></div>
+            <span>South Africa's SME Growth Partner</span>
+        </div>
+        <h1>Every Business<br>Deserves to <em>Scale.</em></h1>
+        <p>MNM Consultants removes the barriers between where your business is today and where it could be. Legal, Employment &amp; Labour, Risk, Compliance, and Financial solutions — one partner, every answer.</p>
+        <div class="hero-actions">
+            <a href="#cta" class="btn-primary">Book a Free Consultation</a>
+            <a href="#services" class="btn-outline">Explore Services</a>
+        </div>
+        <div class="hero-stats">
+            <div class="hero-stat">
+                <strong>5</strong>
+                <span>Service Areas</span>
+            </div>
+            <div class="hero-stat">
+                <strong>100+</strong>
+                <span>SMEs Supported</span>
+            </div>
+            <div class="hero-stat">
+                <strong>1</strong>
+                <span>Partner. All Solutions.</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="hero-visual">
+        <div class="hero-visual-card">
+            <div class="service-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <div class="card-text">
+                <strong>Legal Services</strong>
+                <span>Registration, Contracts & Disputes</span>
+            </div>
+        </div>
+        <div class="hero-visual-card">
+            <div class="service-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <div class="card-text">
+                <strong>Employment &amp; Labour</strong>
+                <span>Recruitment, Rights &amp; Benefits</span>
+            </div>
+        </div>
+        <div class="hero-visual-card">
+            <div class="service-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+            </div>
+            <div class="card-text">
+                <strong>Risk Management</strong>
+                <span>Frameworks, Continuity & COIDA</span>
+            </div>
+        </div>
+        <div class="hero-visual-card">
+            <div class="service-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+            </div>
+            <div class="card-text">
+                <strong>Compliance</strong>
+                <span>POPIA, BBBEE & Labour Law</span>
+            </div>
+        </div>
+        <div class="hero-visual-card">
+            <div class="service-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            </div>
+            <div class="card-text">
+                <strong>Financial Advisory</strong>
+                <span>Planning, Tax & Pension</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="hero-bg-mark" aria-hidden="true">MNM</div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════ TICKER -->
+<div class="ticker" aria-hidden="true">
+    <div class="ticker-inner" id="ticker">
+        <span class="ticker-item"><span class="ticker-dot"></span> CIPC Business Registration</span>
+        <span class="ticker-item"><span class="ticker-dot"></span> BBBEE Advisory</span>
+        <span class="ticker-item"><span class="ticker-dot"></span> Recruitment &amp; Employment Policy</span>
+        <span class="ticker-item"><span class="ticker-dot"></span> POPIA Compliance</span>
+        <span class="ticker-item"><span class="ticker-dot"></span> Employment Equity</span>
+        <span class="ticker-item"><span class="ticker-dot"></span> Risk Assessment</span>
+        <span class="ticker-item"><span class="ticker-dot"></span> Management Accounts</span>
+        <span class="ticker-item"><span class="ticker-dot"></span> Tax Planning</span>
+        <span class="ticker-item"><span class="ticker-dot"></span> CCMA Representation</span>
+        <span class="ticker-item"><span class="ticker-dot"></span> Business Continuity</span>
+        <span class="ticker-item"><span class="ticker-dot"></span> Skills Development (SETA)</span>
+        <span class="ticker-item"><span class="ticker-dot"></span> Pension Fund Advisory</span>
+        <!-- duplicate for seamless loop -->
+        <span class="ticker-item"><span class="ticker-dot"></span> CIPC Business Registration</span>
+        <span class="ticker-item"><span class="ticker-dot"></span> BBBEE Advisory</span>
+        <span class="ticker-item"><span class="ticker-dot"></span> Recruitment &amp; Employment Policy</span>
+        <span class="ticker-item"><span class="ticker-dot"></span> POPIA Compliance</span>
+        <span class="ticker-item"><span class="ticker-dot"></span> Employment Equity</span>
+        <span class="ticker-item"><span class="ticker-dot"></span> Risk Assessment</span>
+        <span class="ticker-item"><span class="ticker-dot"></span> Management Accounts</span>
+        <span class="ticker-item"><span class="ticker-dot"></span> Tax Planning</span>
+        <span class="ticker-item"><span class="ticker-dot"></span> CCMA Representation</span>
+        <span class="ticker-item"><span class="ticker-dot"></span> Business Continuity</span>
+        <span class="ticker-item"><span class="ticker-dot"></span> Skills Development (SETA)</span>
+        <span class="ticker-item"><span class="ticker-dot"></span> Pension Fund Advisory</span>
+    </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════ ABOUT -->
+<section class="about" id="about">
+    <div class="about-left">
+        <div class="about-logo-text">MNM<br>Consultants</div>
+        <div class="about-pillar"><span class="about-pillar-num">01</span><span>Legal</span></div>
+        <div class="about-pillar"><span class="about-pillar-num">02</span><span>Employment &amp; Labour</span></div>
+        <div class="about-pillar"><span class="about-pillar-num">03</span><span>Risk Management</span></div>
+        <div class="about-pillar"><span class="about-pillar-num">04</span><span>Compliance</span></div>
+        <div class="about-pillar"><span class="about-pillar-num">05</span><span>Financial</span></div>
+    </div>
+    <div class="about-right">
+        <div class="label">About MNM Consultants</div>
+        <h2 class="section-title">We Level the<br>Playing Field</h2>
+        <p>Large corporates have access to armies of lawyers, employment specialists, risk officers, compliance experts, and financial advisors. Small and medium businesses often go without — not because these services aren't needed, but because there's never been a single, accessible point of entry.</p>
+        <p>MNM Consultants was built to change that. We work exclusively with South African SMEs, giving them the same quality of advice and implementation support that enterprise businesses take for granted — without the enterprise price tag.</p>
+        <p>From registering your first entity at CIPC, to navigating your BEE scorecard, to setting up your employment framework and ensuring you're audit-ready — we're with you every step of the way.</p>
+        <div class="mission-quote">
+            <p>"One Partner. Every Solution. Endless Growth." — That's not a tagline. That's a commitment we make to every business we work with.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════ FOUNDERS -->
+<section class="founders" id="team">
+    <div class="founders-intro">
+        <div>
+            <div class="label">Meet the Founders</div>
+            <h2 class="section-title">Built by Professionals.<br>Driven by Purpose.</h2>
+        </div>
+        <p class="section-sub">MNM Consultants was founded by three qualified professionals who saw the same gap in South Africa's SME landscape — and decided to close it together.</p>
+    </div>
+
+    <div class="founders-grid">
+
+        <div class="founder-card reveal">
+            <div class="founder-avatar-wrap">
+                <img src="assets/avatar-placeholder.png" alt="Profile placeholder" class="founder-avatar">
+                <div class="founder-avatar-ring"></div>
+            </div>
+            <h3>Dumo Ndlovu</h3>
+            <div class="founder-role">Co-Founder &middot; Legal &amp; Compliance</div>
+            <div class="founder-divider"></div>
+            <div class="founder-degree">Bachelor of Laws (LLB)</div>
+            <div class="founder-uni">University of South Africa (UNISA)</div>
+        </div>
+
+        <div class="founder-card reveal">
+            <div class="founder-avatar-wrap">
+                <img src="assets/avatar-placeholder.png" alt="Profile placeholder" class="founder-avatar">
+                <div class="founder-avatar-ring"></div>
+            </div>
+            <h3>Tony Mthombeni</h3>
+            <div class="founder-role">Co-Founder &middot; Legal &amp; Compliance</div>
+            <div class="founder-divider"></div>
+            <div class="founder-degree">Bachelor of Laws (LLB)</div>
+            <div class="founder-uni">University of the Free State (UFS)</div>
+        </div>
+
+        <div class="founder-card reveal">
+            <div class="founder-avatar-wrap">
+                <img src="assets/avatar-placeholder.png" alt="Profile placeholder" class="founder-avatar">
+                <div class="founder-avatar-ring"></div>
+            </div>
+            <h3>Wandile Mtshwene</h3>
+            <div class="founder-role">Co-Founder &middot; Risk &amp; Finance</div>
+            <div class="founder-divider"></div>
+            <div class="founder-degree">Bachelor of Science in Actuarial and Financial Mathematics</div>
+            <div class="founder-uni">University of Pretoria (UP)</div>
+        </div>
+
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════ SERVICES -->
+<section class="services" id="services">
+    <div class="services-header">
+        <div>
+            <div class="label">What We Do</div>
+            <h2 class="section-title">Five Disciplines.<br>One Firm.</h2>
+        </div>
+        <p class="section-sub">Every service we offer is designed to help your business operate, comply, and scale — without the cost of maintaining five separate specialists.</p>
+    </div>
+
+    <div class="services-grid">
+
+        <!-- LEGAL -->
+        <div class="svc-card reveal">
+            <div class="svc-num">01</div>
+            <div class="svc-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h3>Legal</h3>
+            <p>Protecting your business with the right legal foundation — from formation to contracts, disputes, and intellectual property.</p>
+            <ul class="svc-list">
+                <li>Business registration (CIPC)</li>
+                <li>Company secretarial services</li>
+                <li>Commercial contracts &amp; MOUs</li>
+                <li>Intellectual property protection</li>
+                <li>CCMA representation &amp; support</li>
+                <li>Shareholder &amp; partnership agreements</li>
+            </ul>
+        </div>
+
+        <!-- HR -->
+        <div class="svc-card reveal">
+            <div class="svc-num">02</div>
+            <div class="svc-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <h3>Employment &amp; Labour</h3>
+            <p>Connecting businesses with the right people, and protecting both employer and employee through every stage of the employment relationship.</p>
+            <ul class="svc-list">
+                <li>Recruitment &amp; candidate selection</li>
+                <li>Employment contracts &amp; offer letters</li>
+                <li>Employee rights advisory (LRA &amp; BCEA)</li>
+                <li>Employee benefits &amp; UIF structuring</li>
+                <li>Employment Equity (EEA) compliance</li>
+                <li>Disciplinary, grievance &amp; CCMA support</li>
+            </ul>
+        </div>
+
+        <!-- RISK -->
+        <div class="svc-card reveal">
+            <div class="svc-num">03</div>
+            <div class="svc-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+            </div>
+            <h3>Risk Management</h3>
+            <p>Identifying threats before they become crises — and building the systems that keep your business resilient when they do.</p>
+            <ul class="svc-list">
+                <li>Business risk assessments</li>
+                <li>Risk registers &amp; governance frameworks</li>
+                <li>Business continuity planning</li>
+                <li>Insurance advisory &amp; structuring</li>
+                <li>COIDA &amp; workplace safety compliance</li>
+                <li>Operational risk controls</li>
+            </ul>
+        </div>
+
+        <!-- COMPLIANCE -->
+        <div class="svc-card reveal">
+            <div class="svc-num">04</div>
+            <div class="svc-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+            </div>
+            <h3>Compliance</h3>
+            <p>Staying ahead of an ever-changing regulatory landscape, so your business never gets caught off-guard or underprepared.</p>
+            <ul class="svc-list">
+                <li>POPIA compliance &amp; data governance</li>
+                <li>BBBEE strategy &amp; scorecard management</li>
+                <li>Labour Relations Act compliance</li>
+                <li>Sector-specific regulatory advisory</li>
+                <li>PAYE, UIF &amp; COIDA submissions</li>
+                <li>OHSA health &amp; safety compliance</li>
+            </ul>
+        </div>
+
+        <!-- FINANCIAL -->
+        <div class="svc-card reveal">
+            <div class="svc-num">05</div>
+            <div class="svc-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            </div>
+            <h3>Financial</h3>
+            <p>Giving your business the financial clarity, systems, and access to capital it needs to grow with real confidence.</p>
+            <ul class="svc-list">
+                <li>Financial planning &amp; budgeting</li>
+                <li>Management accounts &amp; reporting</li>
+                <li>Tax planning &amp; SARS submissions</li>
+                <li>Pension &amp; provident fund advisory</li>
+                <li>Funding readiness &amp; investor preparation</li>
+                <li>Cash flow management systems</li>
+            </ul>
+        </div>
+
+        <!-- MANAGEMENT CONSULTING -->
+        <div class="svc-card reveal">
+            <div class="svc-num">+</div>
+            <div class="svc-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            </div>
+            <h3>Management Consulting</h3>
+            <p>Strategy, systems, and structure to help your business operate like the company it's becoming — not the startup it was.</p>
+            <ul class="svc-list">
+                <li>Business strategy &amp; growth planning</li>
+                <li>Systems &amp; process implementation</li>
+                <li>Organisational structure design</li>
+                <li>Government tender &amp; proposal support</li>
+                <li>Market entry &amp; expansion advisory</li>
+                <li>Business development support</li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════ WHY US -->
+<section class="why">
+    <div class="label">Why MNM</div>
+    <h2 class="section-title">What Makes<br>Us Different</h2>
+    <p class="section-sub">Most consulting firms serve large corporates. We built MNM for the businesses that haven't had a seat at the table — until now.</p>
+
+    <div class="why-layout">
+        <div class="stats-block">
+            <div class="stat-cell reveal">
+                <strong id="stat1">5+</strong>
+                <span>Service Disciplines</span>
+            </div>
+            <div class="stat-cell reveal">
+                <strong id="stat2">R0</strong>
+                <span>Hidden Fees</span>
+            </div>
+            <div class="stat-cell reveal">
+                <strong id="stat3">100%</strong>
+                <span>SME Focused</span>
+            </div>
+            <div class="stat-cell reveal">
+                <strong id="stat4">1</strong>
+                <span>Point of Contact</span>
+            </div>
+        </div>
+
+        <div class="why-pillars">
+            <div class="why-pillar reveal">
+                <h4><span class="pillar-dot"></span> Built for South African Business</h4>
+                <p>Everything we do is grounded in South African legislation, culture, and commercial realities. The Companies Act, the LRA, POPIA, BBBEE Codes — we know them, and we know how to apply them to your specific context.</p>
+            </div>
+            <div class="why-pillar reveal">
+                <h4><span class="pillar-dot"></span> One Relationship. Every Answer.</h4>
+                <p>Stop juggling five advisors who don't speak to each other. With MNM, your entire advisory team operates as one coordinated unit — aligned, efficient, and focused on your growth.</p>
+            </div>
+            <div class="why-pillar reveal">
+                <h4><span class="pillar-dot"></span> Practical, Not Just Advisory</h4>
+                <p>We don't just tell you what needs to be done. We help you build it — the policies, systems, and structures that work in your business every day, not just on paper.</p>
+            </div>
+            <div class="why-pillar reveal">
+                <h4><span class="pillar-dot"></span> Priced for Growth-Stage Businesses</h4>
+                <p>Our pricing is designed for businesses building momentum — not enterprises with unlimited budgets. We offer modular, retainer, and project-based packages that scale with you.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════ PROCESS -->
+<section class="process section" id="process">
+    <div class="label">How It Works</div>
+    <h2 class="section-title">From First Call to<br>Full Compliance</h2>
+    <p class="section-sub">A process that's clear, efficient, and tailored to where your business actually is — not where a textbook says it should be.</p>
+
+    <div class="process-steps">
+        <div class="process-step reveal">
+            <div class="step-circle">01</div>
+            <h4>Discovery Session</h4>
+            <p>A free, no-obligation consultation to understand your business, your goals, and your most pressing challenges. No jargon, no pitch.</p>
+        </div>
+        <div class="process-step reveal">
+            <div class="step-circle">02</div>
+            <h4>Needs Assessment</h4>
+            <p>We evaluate your current state across all relevant disciplines — legal standing, employment gaps, compliance exposure, risk, and financial health.</p>
+        </div>
+        <div class="process-step reveal">
+            <div class="step-circle">03</div>
+            <h4>Tailored Proposal</h4>
+            <p>You receive a transparent proposal with recommended services, timelines, and pricing. We work to your budget and your pace — always.</p>
+        </div>
+        <div class="process-step reveal">
+            <div class="step-circle">04</div>
+            <h4>Ongoing Partnership</h4>
+            <p>We implement, advise, and stay available as your trusted partner — adapting as your business evolves, grows, and faces new challenges.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════ TESTIMONIALS -->
+<section class="testimonials section">
+    <div class="label">Client Stories</div>
+    <h2 class="section-title">What Our Clients Say</h2>
+
+    <div class="t-grid">
+        <div class="t-card reveal">
+            <div class="t-quote">"</div>
+            <p>"We had no idea how to register our business properly or what compliance requirements applied to us. MNM walked us through everything — from CIPC registration to our first employment policies. We finally feel like a legitimate, professional operation."</p>
+            <div class="t-author">
+                <div class="t-avatar">TM</div>
+                <div class="t-author-info">
+                    <strong>Thandeka Mokoena</strong>
+                    <span>Founder, TM Trading &amp; Logistics</span>
+                </div>
+            </div>
+        </div>
+        <div class="t-card reveal">
+            <div class="t-quote">"</div>
+            <p>"The financial advisory was worth every cent. We were trading without understanding our own cash flow. MNM helped us build a management account system we actually use every month — and we doubled our profit margins within a year."</p>
+            <div class="t-author">
+                <div class="t-avatar">SN</div>
+                <div class="t-author-info">
+                    <strong>Sipho Nkosi</strong>
+                    <span>MD, Nkosi Construction Group</span>
+                </div>
+            </div>
+        </div>
+        <div class="t-card reveal">
+            <div class="t-quote">"</div>
+            <p>"We faced a CCMA case with zero documentation. MNM helped us through the dispute and then built out a complete employment framework so we'd never be in that position again. Their practical approach saved us from much bigger problems down the line."</p>
+            <div class="t-author">
+                <div class="t-avatar">KD</div>
+                <div class="t-author-info">
+                    <strong>Keitumetse Dlamini</strong>
+                    <span>Director, KD Facilities Management</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════ CTA -->
+<section class="cta" id="cta">
+    <div class="cta-inner">
+        <h2>Ready to Build<br>Something That Lasts?</h2>
+        <p>Book a free 30-minute consultation with the MNM team. We'll assess where your business stands today and show you exactly what's possible tomorrow.</p>
+        <div class="cta-btns">
+            <a href="mailto:info@mnmconsultants.co.za" class="btn-white">Book a Free Consultation</a>
+            <a href="tel:+27000000000" class="btn-ghost">Call Us Today</a>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════ FOOTER -->
+<footer>
+    <div class="footer-top">
+        <div class="footer-brand">
+            <img src="assets/logo-icon.png" alt="MNM Consultants">
+            <div class="footer-brand-name">MNM Consultants</div>
+            <p>South Africa's one-stop consulting partner for small and medium businesses. Legal, Employment &amp; Labour, Risk, Compliance, and Financial services — all under one roof, built for businesses that are ready to grow.</p>
+            <div class="footer-tagline">One Partner. Every Solution. Endless Growth.</div>
+        </div>
+
+        <div class="footer-col">
+            <h5>Services</h5>
+            <ul>
+                <li><a href="#services">Legal</a></li>
+                <li><a href="#services">Employment &amp; Labour</a></li>
+                <li><a href="#services">Risk Management</a></li>
+                <li><a href="#services">Compliance</a></li>
+                <li><a href="#services">Financial</a></li>
+                <li><a href="#services">Management Consulting</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h5>Company</h5>
+            <ul>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#process">How It Works</a></li>
+                <li><a href="#team">Our Team</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h5>Contact</h5>
+            <div class="footer-contact-row">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                <span>info@mnmconsultants.co.za</span>
+            </div>
+            <div class="footer-contact-row">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.6a16 16 0 0 0 5.5 5.5l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                <span>+27 (0) 00 000 0000</span>
+            </div>
+            <div class="footer-contact-row">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                <span>Johannesburg, Gauteng<br>South Africa</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2026 MNM Consultants (Pty) Ltd. All rights reserved.</p>
+        <p>Built for <span>South African</span> businesses that refuse to stay small.</p>
+    </div>
+</footer>
+
+<script>
+    // ── Navbar scroll ──────────────────────────────────
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+        nav.classList.toggle('scrolled', window.scrollY > 40);
+    }, { passive: true });
+
+    // ── Mobile menu ────────────────────────────────────
+    const hamburger = document.getElementById('hamburger');
+    const navLinks  = document.getElementById('navLinks');
+
+    hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('open');
+        const spans = hamburger.querySelectorAll('span');
+        const open  = navLinks.classList.contains('open');
+        spans[0].style.transform = open ? 'rotate(45deg) translate(5px, 5px)' : '';
+        spans[1].style.opacity   = open ? '0' : '1';
+        spans[2].style.transform = open ? 'rotate(-45deg) translate(5px, -5px)' : '';
+    });
+
+    navLinks.querySelectorAll('a').forEach(a => {
+        a.addEventListener('click', () => {
+            navLinks.classList.remove('open');
+            hamburger.querySelectorAll('span').forEach(s => {
+                s.style.transform = '';
+                s.style.opacity   = '1';
+            });
+        });
+    });
+
+    // ── Reveal on scroll ──────────────────────────────
+    const revealObs = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+            if (e.isIntersecting) {
+                e.target.classList.add('in-view');
+                revealObs.unobserve(e.target);
+            }
+        });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
+
+    // ── Counter animation ─────────────────────────────
+    function countUp(el, end, suffix, duration = 1400) {
+        let startTime = null;
+        function step(ts) {
+            if (!startTime) startTime = ts;
+            const p = Math.min((ts - startTime) / duration, 1);
+            const eased = 1 - Math.pow(1 - p, 3);
+            el.textContent = Math.floor(eased * end) + suffix;
+            if (p < 1) requestAnimationFrame(step);
+        }
+        requestAnimationFrame(step);
+    }
+
+    const statsObs = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+            if (!e.isIntersecting) return;
+            const id = e.target.id;
+            if (id === 'stat1') countUp(e.target, 5, '+');
+            if (id === 'stat3') countUp(e.target, 100, '%');
+            if (id === 'stat4') countUp(e.target, 1, '');
+            statsObs.unobserve(e.target);
+        });
+    }, { threshold: 0.5 });
+
+    ['stat1','stat3','stat4'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) statsObs.observe(el);
+    });
+</script>
+
+<!-- ═══════════════════════════════════════════════════ WHATSAPP -->
+<a class="wa-btn" href="https://wa.me/27000000000" target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+</a>
+
+</body>
+</html>
