@@ -1215,11 +1215,13 @@
             .about { grid-template-columns: 1fr; gap: 0; }
             .about-left {
                 border-radius: 4px 4px 0 0;
-                text-align: center;
                 padding: 48px 36px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
             }
-            .about-logo-text { text-align: center; }
-            .about-pillar { justify-content: center; }
+            .about-logo-text { text-align: center; width: 100%; }
+            .about-pillar { justify-content: center; width: 100%; max-width: 280px; }
             .about-right { padding: 48px 36px; background: var(--bg-alt); border-radius: 0 0 4px 4px; text-align: center; }
             .about-right p { text-align: left; }
             .mission-quote { text-align: left; }
@@ -1263,11 +1265,16 @@
             .section-sub { text-align: center; margin-left: auto; margin-right: auto; }
 
             /* About section */
+            .about-left {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .about-logo-text { text-align: center; width: 100%; }
+            .about-pillar { justify-content: center; width: 100%; max-width: 260px; }
             .about-right { text-align: center; }
             .about-right p { text-align: left; }
             .mission-quote { text-align: left; }
-            .about-logo-text { text-align: center; }
-            .about-pillar { justify-content: center; text-align: center; }
 
             /* Services */
             .services-grid { grid-template-columns: 1fr; }
