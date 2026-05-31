@@ -1220,7 +1220,8 @@
             }
             .about-logo-text { text-align: center; }
             .about-pillar { justify-content: center; }
-            .about-right { padding: 48px 36px; background: var(--bg-alt); border-radius: 0 0 4px 4px; }
+            .about-right { padding: 48px 36px; background: var(--bg-alt); border-radius: 0 0 4px 4px; text-align: center; }
+            .about-right p { text-align: left; }
             .mission-quote { text-align: left; }
 
             .founders-grid { grid-template-columns: 1fr; max-width: 440px; margin: 0 auto; }
@@ -1256,28 +1257,47 @@
             }
             .hamburger { display: flex; }
 
+            /* Global text centering */
             .label { text-align: center; }
             .section-title { text-align: center; }
             .section-sub { text-align: center; margin-left: auto; margin-right: auto; }
 
+            /* About section */
+            .about-right { text-align: center; }
+            .about-right p { text-align: left; }
+            .mission-quote { text-align: left; }
+            .about-logo-text { text-align: center; }
+            .about-pillar { justify-content: center; text-align: center; }
+
+            /* Services */
             .services-grid { grid-template-columns: 1fr; }
 
+            /* Process */
             .process { text-align: center; }
             .process .section-sub { margin: 0 auto; }
             .process-steps { grid-template-columns: 1fr 1fr; gap: 44px; }
             .process-steps::before { display: none; }
             .process-step { text-align: center; }
 
+            /* Testimonials */
             .t-grid { grid-template-columns: 1fr; }
 
+            /* Footer */
             .footer-top { grid-template-columns: 1fr; gap: 36px; text-align: center; }
-            .footer-brand p { max-width: 100%; }
+            .footer-brand { display: flex; flex-direction: column; align-items: center; }
+            .footer-brand img { margin: 0 auto 8px; }
+            .footer-brand-name { text-align: center; }
+            .footer-brand p { max-width: 100%; text-align: center; }
+            .footer-tagline { text-align: center; }
+            .footer-col { text-align: center; }
             .footer-contact-row { justify-content: center; }
             .footer-bottom { flex-direction: column; text-align: center; }
 
+            /* Stats & hero */
             .stats-block { grid-template-columns: 1fr 1fr; }
             .hero-stats { gap: 20px; justify-content: center; }
 
+            /* CTA */
             .cta { text-align: center; }
             .cta h2 { text-align: center; }
         }
